@@ -1,8 +1,20 @@
-﻿
-Console.Write("Inserisci il tuo nome: ");
+﻿using System.Text.RegularExpressions;
 
-string name = Console.ReadLine();
+try
+{
+    Console.Write("Inserisci il tuo nome: ");
+    string name = Console.ReadLine();
 
-Console.WriteLine($"Ciao, {name}! Benvenuto in .NET!"); 
-
-/* TEST */
+    if (Regex.IsMatch(name, @"^[a-zA-Z]+$"))
+    {
+        Console.WriteLine($"Ciao, {name}! Benvenuto in .NET!");
+    }
+    else
+    {
+        Console.WriteLine("Nome non valido. Inserisci solo lettere.");
+    }
+}
+catch (FormatException)
+{
+    Console.WriteLine("Errore di formattazione.");
+}
