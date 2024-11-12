@@ -1,7 +1,6 @@
-﻿using System;
-using System.Text.RegularExpressions;
+﻿//using System.Text.RegularExpressions;
 
-try
+/*try
 {
     string name;
 
@@ -29,4 +28,16 @@ catch (FormatException)
 {
     // Gestione eventuali eccezioni di formattazione
     Console.WriteLine("Errore di formattazione.");
-}
+}*/
+
+using hello_dotNET;
+
+IDriveable myCar = new Car();
+IDriveable myBike = new Bike();
+
+IDriveable myBoat = new Boat();
+
+
+myCar.Drive();
+myBike.Drive();
+myBoat.Drive();
